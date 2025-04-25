@@ -1,34 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            background-color: #ffffff;
-            color: #333333;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        p {
-            font-size: 2em;
-            margin-top: 0;
-        }
-        .flag {
-            margin-top: 50px;
-        }
-        img {
-            width: 150px;
-            height: auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon</title>
+  <style>
+    body {
+      background-color: #fefefe;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .flag {
+      width: 200px;
+      height: 120px;
+    }
+
+    .wave {
+      animation: wave 2s ease-in-out infinite;
+      transform-origin: 50% 50%;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(1deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-1deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
 </head>
 <body>
-    <p>Coming in 2027</p>
-    <div class="flag">
-        <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" alt="Japanese Flag">
-    </div>
+  <h1>Coming in 2027</h1>
+
+  <!-- Inline SVG Japanese Flag -->
+  <svg class="flag wave" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+    <rect width="3" height="2" fill="#ffffff"/>
+    <circle cx="1.5" cy="1" r="0.6" fill="#bc002d"/>
+  </svg>
 </body>
 </html>
